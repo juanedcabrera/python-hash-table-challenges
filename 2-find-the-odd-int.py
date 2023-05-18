@@ -23,5 +23,25 @@ Input: [10]
 Output: 10
 '''    
 
+# def find_it(list):
+#     for i in list:
+#         if list.count(i) % 2 == 1:
+#             return i 
+        
+# print(find_it([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5])) # 5
+# print(find_it([1,1,2,-2,5,2,4,4,-1,-2,5])) # -1
+# print(find_it([10])) # 10
+
 def find_it(li):
-  pass
+    hash_table = {}
+    for num in li:
+        if num in hash_table:
+            hash_table[num] += 1
+        else:
+            hash_table[num] = 1
+    for num in hash_table:
+        if hash_table[num] % 2 == 1:
+            return num
+        
+        
+print(find_it([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5])) # 5

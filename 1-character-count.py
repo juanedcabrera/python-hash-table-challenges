@@ -29,4 +29,22 @@ the character d occurs 1 times
 '''
 
 def character_count(string):
-  pass
+    for i in string:
+        print(f"the character {i} occurs {string.count(i)} times")
+
+character_count('banana')
+character_count('hello world')
+
+
+# def character_count(string):
+#     count_dict = {}
+#     for i in string:
+#         if i in count_dict:
+#             count_dict[i] += 1
+#         else:
+#             count_dict[i] = 1
+#     for key, value in count_dict.items():
+#         print(f"the character {key} occurs {value} times")
+
+character_count('banana')
+character_count('hello world')
